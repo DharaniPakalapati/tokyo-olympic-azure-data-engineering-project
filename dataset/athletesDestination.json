@@ -1,5 +1,5 @@
 {
-	"name": "DestinationDataset_6k3",
+	"name": "athletesDestination",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "Athletes",
+				"fileName": "athletes.csv",
 				"folderPath": "raw-data",
 				"fileSystem": "tokyo-olympic-data"
 			},

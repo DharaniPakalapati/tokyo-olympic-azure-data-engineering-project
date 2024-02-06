@@ -1,8 +1,8 @@
 {
-	"name": "SourceDataset_6k3",
+	"name": "Athletes",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "HttpServer1",
+			"referenceName": "CoachesHTTP",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],

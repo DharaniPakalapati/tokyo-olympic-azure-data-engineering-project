@@ -1,9 +1,9 @@
 {
-	"name": "CopyPipeline_6k3",
+	"name": "AthletesCopy",
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy_6k3",
+				"name": "Athletes",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -54,13 +54,52 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_6k3",
+						"referenceName": "Athletes",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_6k3",
+						"referenceName": "athletesDestination",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Coaches",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Athletes",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "HttpReadSettings",
+							"requestMethod": "GET"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "Athletes",
 						"type": "DatasetReference"
 					}
 				]
