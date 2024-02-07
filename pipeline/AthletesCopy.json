@@ -60,7 +60,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "athletesDestination",
+						"referenceName": "Athletescsv",
 						"type": "DatasetReference"
 					}
 				]
