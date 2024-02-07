@@ -2,7 +2,7 @@
 	"name": "Athletes",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "CoachesHTTP",
+			"referenceName": "HttpServer1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
